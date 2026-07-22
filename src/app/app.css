@@ -64,3 +64,16 @@ li:hover {
   color: #999;
   text-align: center;
 }
+
+.eliminar {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: #445eef;
+  color: white;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  background: #dc2626;
+}
