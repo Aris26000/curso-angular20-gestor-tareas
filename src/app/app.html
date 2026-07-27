@@ -10,6 +10,9 @@
     />
 
     <button (click)="store.agregar(inputTarea.value); inputTarea.value = ''">Agregar</button>
+    <button (click)="store.eliminarCompletadas(); inputTarea.value = ''" [disabled]="store.pendientes() === store.tareas().length" [class.deshabilitado]="store.pendientes() === store.tareas().length">
+      Eliminar Completadas</button>
+
   </div>
 
   <ul>

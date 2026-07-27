@@ -38,6 +38,9 @@ export class TaskStore {
       lista.map((t) => (t.id === id ? { ...t, completada: !t.completada } : t)),
     );
   }
+  eliminarCompletadas(): void {
+    this.tareas.update((lista) => lista.filter((t) => !t.completada));
+  }
 
   private cargar(): Task[] {
     const guardadas = localStorage.getItem(STORAGE_KEY);
