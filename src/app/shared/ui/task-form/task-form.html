@@ -1,0 +1,11 @@
+<div class="nueva-tarea">
+    <input
+      type="text"
+      #inputTarea
+      placeholder="Nueva Tarea"
+      (keyup.enter)="agregado.emit(inputTarea.value); inputTarea.value = ''"
+    />
+
+    <button (click)="agregado.emit(inputTarea.value);inputTarea.value = ''">Agregar</button>
+    
+  </div>

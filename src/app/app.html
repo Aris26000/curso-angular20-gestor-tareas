@@ -1,19 +1,11 @@
 <main>
   <h1>{{ title }}</h1>
 
-  <div class="nueva-tarea">
-    <input
-      type="text"
-      #inputTarea
-      placeholder="Nueva Tarea"
-      (keyup.enter)="store.agregar(inputTarea.value); inputTarea.value = ''"
-    />
-
-    <button (click)="store.agregar(inputTarea.value); inputTarea.value = ''">Agregar</button>
-    <button (click)="store.eliminarCompletadas(); inputTarea.value = ''" [disabled]="store.pendientes() === store.tareas().length" [class.deshabilitado]="store.pendientes() === store.tareas().length">
-      Eliminar Completadas</button>
-
-  </div>
+  <app-task-form
+          (agregado)="store.agregar($event)"
+        
+      />
+  
 
   <ul>
     @for (tarea of store.tareas(); track tarea.id) {
@@ -27,6 +19,10 @@
       <li>No hay tareas. Agrega una!!</li>
     }
   </ul>
+  <div class="eliminar">
+    <button (click)="store.eliminarCompletadas(); " [disabled]="store.pendientes() === store.tareas().length" [class.deshabilitado]="store.pendientes() === store.tareas().length">
+      Eliminar Completadas</button>
+  </div>
 </main>
 
 <router-outlet />
