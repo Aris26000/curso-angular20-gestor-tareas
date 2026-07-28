@@ -1,0 +1,13 @@
+<li (click)="toggle.emit(task().id)" [class.hecha]="task().completada">
+        <span>{{ task().titulo }}</span>
+
+        <span class="acciones">
+          @if (task().completada) {
+            <span>Ok</span>
+          }
+
+          <button type="button" class="eliminar" (click)="removed.emit(task().id);$event.stopPropagation()">
+            Eliminar
+          </button>
+        </span>
+      </li>

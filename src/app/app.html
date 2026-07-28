@@ -17,19 +17,12 @@
 
   <ul>
     @for (tarea of store.tareas(); track tarea.id) {
-      <li (click)="store.toggle(tarea.id)" [class.hecha]="tarea.completada">
-        <span>{{ tarea.titulo }}</span>
-
-        <span class="acciones">
-          @if (tarea.completada) {
-            <span>Ok</span>
-          }
-
-          <button type="button" class="eliminar" (click)="store.eliminar(tarea.id);$event.stopPropagation()">
-            Eliminar
-          </button>
-        </span>
-      </li>
+      <app-task-item
+          [task]="tarea"
+          (toggle)="store.toggle($event)"
+          (removed)="store.eliminar($event)"
+        
+      />
     } @empty {
       <li>No hay tareas. Agrega una!!</li>
     }

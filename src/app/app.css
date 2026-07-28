@@ -35,49 +35,31 @@ h1 {
   cursor: pointer;
 }
 
+.cargar {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d81b60;
+  border-radius: 6px;
+  background: transparent;
+  color: #d81b60;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.estado {
+  color: #666;
+}
+
+.error {
+  color: #c62828;
+}
+
 ul {
   list-style: none;
   padding: 0;
 }
 
-li {
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  margin-bottom: 0.4rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-
-li:hover {
-  background: #fafafa;
-}
-
-.hecha {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-
 .vacio {
-  cursor: default;
+  padding: 0.6rem 0.75rem;
   color: #999;
   text-align: center;
-}
-
-.eliminar {
-  border: none;
-  border-radius: 999px;
-  padding: 0.35rem 0.75rem;
-  background: #445eef;
-  color: white;
-  cursor: pointer;
-}
-
-.eliminar:hover {
-  background: #dc2626;
-}
-
-.deshabilitado {
-  opacity: 0.5;
 }
