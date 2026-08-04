@@ -63,3 +63,10 @@ ul {
   color: #999;
   text-align: center;
 }
+
+.eliminar {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: auto;
+}
