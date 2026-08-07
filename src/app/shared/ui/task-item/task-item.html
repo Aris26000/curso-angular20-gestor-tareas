@@ -5,7 +5,8 @@
           @if (task().completada) {
             <span>Ok</span>
           }
-
+          <a class="ver" [routerLink]="['/tarea', task().id]" (click)="$event.stopPropagation()">🔍</a>
+           
           <button type="button" class="eliminar" (click)="removed.emit(task().id);$event.stopPropagation()">
             Eliminar
           </button>

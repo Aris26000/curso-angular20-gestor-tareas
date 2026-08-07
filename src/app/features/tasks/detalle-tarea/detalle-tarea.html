@@ -1,0 +1,9 @@
+<a routerLink="/" >Volver a la lista</a>
+
+@if (tarea(); as t) {
+  <h2>{{ t.titulo }}</h2>
+  <p>{{ t.completada ? 'Completada' : 'Pendiente' }}</p>
+  <p class="meta">Id interno: {{ t.id }}</p>
+}@else {
+    <p>No existe la taerea con el id {{id()}}</p>
+}

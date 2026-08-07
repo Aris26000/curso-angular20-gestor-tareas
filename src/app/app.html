@@ -1,37 +1,7 @@
 <main>
   <h1>{{ title }}</h1>
 
-  <app-task-form
-(agregado)="store.agregar($event)"
-        
-      />
-  
-<button class="cargar" (click)="store.cargarEjemplos()">Cargar ejemplos de la Api</button>
-
-   @if (store.cargando()) {
-    <p class="estado">Cargando tareas...</p>
-  }
-
-  @if (store.error()) {
-    <p class="estado error">{{ store.error() }}</p>
-  }
-
-  <ul>
-    @for (tarea of store.tareas(); track tarea.id) {
-      <app-task-item
-          [task]="tarea"
-          (toggle)="store.toggle($event)"
-          (removed)="store.eliminar($event)"
-        
-      />
-    } @empty {
-      <li>No hay tareas. Agrega una!!</li>
-    }
-  </ul>
-  <div class="eliminar">
-    <button (click)="store.eliminarCompletadas(); " [disabled]="store.pendientes() === store.tareas().length" [class.deshabilitado]="store.pendientes() === store.tareas().length">
-      Eliminar Completadas</button>
-  </div>
+ <router-outlet />
 </main>
 
-<router-outlet />
+

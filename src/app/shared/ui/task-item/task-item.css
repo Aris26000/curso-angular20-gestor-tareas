@@ -17,9 +17,13 @@ li:hover {
   opacity: 0.6;
 }
 
+.ver {
+  margin-left: auto;
+  text-decoration: none;
+}
+
 .eliminar {
   border: none;
   background: transparent;
   cursor: pointer;
-  margin-left: auto;
 }

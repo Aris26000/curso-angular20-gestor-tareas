@@ -1,17 +1,12 @@
-import { Component, inject } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TaskStore } from './features/tasks/task-store';
-import { TaskItem } from './shared/ui/task-item/task-item';
-import { TaskForm } from './shared/ui/task-form/task-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,TaskItem,TaskForm],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = 'Gestor de tareas';
-
-  store = inject(TaskStore);
+ protected readonly title = 'Gestor de tareas';
 }
